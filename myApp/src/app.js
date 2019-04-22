@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import Index from './pages/index'
+import Person from './pages/person'
 
 import './app.css'
 
@@ -13,7 +14,11 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/addview/index',
+      'pages/viewlist/index',
+      'pages/address/index',
+      'pages/person/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -23,19 +28,23 @@ class App extends Component {
     }
   }
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
-  componentDidCatchError () {}
+  componentDidCatchError() { }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
-      <Index />
+      <View>
+        <Index />
+        <Person />
+      </View>
+
     )
   }
 }
